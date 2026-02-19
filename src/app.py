@@ -65,13 +65,3 @@ def signup_for_activity(activity_name: str, email: str):
     # Add student
     activity["participants"].append(email)
     return {"message": f"Signed up {email} for {activity_name}"}
-
-
-# multiple ways to implement Singleton in Python:
-# 1. Using a decorator
-# 2. Using a metaclass
-# 3. Using a module-level variable
-# 4. Using a class variable
-# 5. Using a base class
-
-
