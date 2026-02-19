@@ -74,13 +74,4 @@ def signup_for_activity(activity_name: str, email: str):
 # 4. Using a class variable
 # 5. Using a base class
 
-#now implement it:
-class SingletonMeta(type):
-    """A Singleton metaclass that ensures only one instance of a class is created."""
-    _instances = {}
-
-    def __call__(cls, *args, **kwargs):
-        if cls not in cls._instances:
-            cls._instances[cls] = super(SingletonMeta, cls).__call__(*args, **kwargs)
-        return cls._instances[cls]
 
