@@ -65,22 +65,3 @@ def signup_for_activity(activity_name: str, email: str):
     # Add student
     activity["participants"].append(email)
     return {"message": f"Signed up {email} for {activity_name}"}
-
-
-# multiple ways to implement Singleton in Python:
-# 1. Using a decorator
-# 2. Using a metaclass
-# 3. Using a module-level variable
-# 4. Using a class variable
-# 5. Using a base class
-
-#now implement it:
-class SingletonMeta(type):
-    """A Singleton metaclass that ensures only one instance of a class is created."""
-    _instances = {}
-
-    def __call__(cls, *args, **kwargs):
-        if cls not in cls._instances:
-            cls._instances[cls] = super(SingletonMeta, cls).__call__(*args, **kwargs)
-        return cls._instances[cls]
-
